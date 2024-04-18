@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">ProjectMobiNew</string>
+    <string name="next">Next</string>
+    <string name="skip_onboarding">Skip onboarding</string>
+    <string name="more">More</string>
+    <string name="choose_lang">Choose a language</string>
+    <string name="choose">Choose</string>
+
+    <string name="lang_sel">Language select</string>
+    <string name="sel_moth_lan">What is your Mother language?</string>
+    <string name="sel_rus">Russian</string>
+    <string name="sel_eng">English</string>
+    <string name="sel_chi">Chinese</string>
+    <string name="sel_bela">Belarus</string>
+    <string name="sel_kaz">Kazakh</string>
+
+    <string name="login">Login</string>
+    <string name="for_free">For free, join now and start learning</string>
+    <string name="Text_Email_Address">Email Address</string>
+    <string name="Text_Pass">Password</string>
+    <string name="Forgot_Pass">Forgot Password</string>
+    <string name="NotYouMember">Not you member?</string>
+    <string name="SignUp">Signup</string>
+    <string name="YouCanUse">You can use</string>
+    <string name="GoogleFor">Google for</string>
+    <string name="Continue">Continue</string>
+
+    <string name="SignIn">sign in</string>
+    <string name="CreaAnAcc">Create an Account</string>
+    <string name="FirstName">First Name</string>
+    <string name="LastName">Last Name</string>
+    <string name="EmAdr">Email Address</string>
+    <string name="title_activity_sign_up2">SignUp2</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+</resources>

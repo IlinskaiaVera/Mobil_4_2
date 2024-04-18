@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--    создание тулбара (фиолетовый квадрат сверху)
+    с иконкой профайла и текстом-привествием-->
+    <!--    (решила в итоге делать отдельно, поскольку неудобно-->
+    <!--    было их перетаскивать внутри тулбара)-->
+
+    <!--    изображение профиля-->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBarMainActiv"
+        android:layout_width="413dp"
+        android:layout_height="140dp"
+        android:background="#410FA3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></com.google.android.material.appbar.MaterialToolbar>
+
+    <!--    текст Are you ready for learning today?-->
+    <TextView
+        android:id="@+id/textAreYouReady"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="Are you ready for learning today?"
+        android:textColor="#B6B6B6"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHelloUser" />
+
+    <ImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/profile_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topAppBarMainActiv"></ImageView>
+
+    <TextView
+        android:id="@+id/textHelloUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="Hello, User"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topAppBarMainActiv" />
+
+    <!--    текст Top Users-->
+    <TextView
+        android:id="@+id/textTopUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="Top users"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topAppBarMainActiv"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <!--    кнопка-картинка с Ван Гогом-->
+    <Button
+        android:id="@+id/butVincent"
+        android:layout_width="355dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="188dp"
+        android:background="@drawable/top_van"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topAppBarMainActiv" />
+
+    <!--    кнопка-картинка с Менделеевым-->
+    <Button
+        android:id="@+id/butMendel"
+        android:layout_width="355dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="272dp"
+        android:background="@drawable/top_mendel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topAppBarMainActiv" />
+
+    <!--    кнопка-картинка с Владом-->
+    <Button
+        android:id="@+id/butVlad"
+        android:layout_width="355dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="356dp"
+        android:background="@drawable/top_vlad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topAppBarMainActiv" />
+
+    <!--    кнопка упражнения угадывания животного-->
+    <Button
+        android:id="@+id/buttonAnimal"
+        android:layout_width="153dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/exc_animal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.752" />
+
+    <!--    кнопка упражнения-игры-->
+    <Button
+        android:id="@+id/buttonGame"
+        android:layout_width="153dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="220dp"
+        android:background="@drawable/exc_game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.932" />
+
+    <!--    текст Available excer-->
+    <TextView
+        android:id="@+id/textAvExcer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="189dp"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="Available excersises"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topAppBarMainActiv"
+        app:layout_constraintVertical_bias="0.481" />
+
+    <!--    кнопка упражнения word practice-->
+    <Button
+        android:id="@+id/buttonWord"
+        android:layout_width="153dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="220dp"
+        android:background="@drawable/exc_word"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.752" />
+
+    <!--    кнопка упражнения прослушивания-->
+    <Button
+        android:id="@+id/buttonAudition"
+        android:layout_width="153dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/exc_audition"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.932" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

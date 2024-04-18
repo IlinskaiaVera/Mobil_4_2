@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnimalGuessError">
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="313dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/button_rounded_choose"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textWhatIsRacoon" />
+
+    <Button
+        android:id="@+id/tryAgainButton"
+        android:layout_width="313dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/button_rounded_choose"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="Try again"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textWhatIsRacoon" />
+
+    <TextView
+        android:id="@+id/textWrong"
+        android:layout_width="208dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="Eh? Wrong answer :("
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageError">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textWhatIsRacoon"
+        android:layout_width="208dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="84dp"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="That is: Racoon"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.645"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageError">
+
+    </TextView>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBarError"
+        android:layout_width="413dp"
+        android:layout_height="115dp"
+        android:background="#D6185D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/back_button_login"
+            android:layout_width="41dp"
+            android:layout_height="39dp"
+            android:background="@drawable/login_back_button"
+            android:onClick="onBackButtonClicked"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.013" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <TextView
+        android:id="@+id/textGuess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="Guess the animal"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topAppBarError" />
+
+    <ImageView
+        android:id="@+id/imageError"
+        android:layout_width="200dp"
+        android:layout_height="203dp"
+        android:layout_marginTop="164dp"
+        android:background="@drawable/picture_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topAppBarError" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

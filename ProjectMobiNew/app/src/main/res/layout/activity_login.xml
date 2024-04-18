@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <!--    создание тулбара (фиолетовый квадрат сверху)-->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBarLogin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#410FA3"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/fredoka_medium"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!--    кнопка возврата-->
+    <Button
+        android:id="@+id/login_back_button"
+        android:layout_width="26dp"
+        android:layout_height="28dp"
+        android:background="@drawable/login_back_button"
+        android:onClick="onBackButtonClicked"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <!--    картинка из figma-->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="140dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="536dp"
+        android:background="@drawable/login_picture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topAppBarLogin"
+        app:layout_constraintVertical_bias="0.681" />
+
+    <!--    текст for free-->
+    <TextView
+        android:id="@+id/TextForFree"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="484dp"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="@string/for_free"
+        android:textSize="22sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    текст у ввода email-->
+    <TextView
+        android:id="@+id/textEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="440dp"
+        android:fontFamily="@font/fredoka"
+        android:text="@string/Text_Email_Address"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    ввод текста email-->
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="334dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="392dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    текст у ввода password-->
+    <TextView
+        android:id="@+id/textPass"
+        android:layout_width="77dp"
+        android:layout_height="17dp"
+        android:layout_marginBottom="372dp"
+        android:fontFamily="@font/fredoka"
+        android:text="@string/Text_Pass"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    раскладка для поля ввода пароля (чтобы сделать скрытие пароля)-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="331dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+        app:layout_constraintVertical_bias="0.0"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/editTextPass"
+            android:layout_width="333dp"
+            android:layout_height="43dp"
+            android:layout_marginBottom="340dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    текст Forgot Pass -->
+    <TextView
+        android:id="@+id/textForgotPass"
+        android:layout_width="114dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="272dp"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="@string/Forgot_Pass"
+        android:textColor="#D6185D"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    кнопка входа после ввода логина и пароля-->
+    <Button
+        android:id="@+id/LogInButton"
+        android:layout_width="313dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="212dp"
+        android:background="@drawable/button_rounded_choose"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    текст Not you member?-->
+    <TextView
+        android:id="@+id/NotYouMemberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="164dp"
+        android:fontFamily="@font/fredoka"
+        android:text="@string/NotYouMember"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.324"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="164dp"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="@string/SignUp"
+        android:textColor="#5B7BFE"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toEndOf="@+id/NotYouMemberText" />
+
+    <TextView
+        android:id="@+id/YouCanUse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginBottom="140dp"
+        android:fontFamily="@font/fredoka"
+        android:text="@string/YouCanUse"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/GoogleFor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="140dp"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="@string/GoogleFor"
+        android:textColor="#5B7BFE"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/YouCanUse" />
+
+    <TextView
+        android:id="@+id/SignIn"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="140dp"
+        android:fontFamily="@font/fredoka"
+        android:text="@string/SignIn"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/GoogleFor" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

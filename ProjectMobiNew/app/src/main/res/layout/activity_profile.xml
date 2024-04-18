@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+    <!--    создание тулбара (фиолетовый квадрат сверху) -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBarProfile"
+        android:layout_width="413dp"
+        android:layout_height="211dp"
+        android:background="#410FA3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!--    иконка профиля пустая-->
+    <ImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="134dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/profile_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <!--    текст Your profile-->
+    <TextView
+        android:id="@+id/textYourProf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="172dp"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="Your profile, User"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topAppBarProfile" />
+
+    <!--    кнопка смены на тёмную тему-->
+    <Button
+        android:id="@+id/buttonSwitchDark"
+        android:layout_width="313dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/button_rounded_choose"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="Switch to dark"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/changeLangButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    кнопка Log out-->
+    <Button
+        android:id="@+id/buttonLogOut"
+        android:layout_width="313dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="72dp"
+        android:background="@drawable/button_rounded_logout"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="Log out"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    кнопка смены языка-->
+    <Button
+        android:id="@+id/changeLangButton"
+        android:layout_width="313dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_rounded_choose"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="Change mother language"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/changeImageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    кнопка смены изображения-->
+    <Button
+        android:id="@+id/changeImageButton"
+        android:layout_width="313dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/button_rounded_choose"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="Change your image"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLogOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

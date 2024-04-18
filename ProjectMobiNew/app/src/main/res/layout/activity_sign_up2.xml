@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp2">
+
+    <!--    создание тулбара (фиолетовый квадрат сверху)-->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBarSignUp1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="101dp"
+        android:background="#410FA3"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/fredoka_medium"
+            android:text="@string/SignUp"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!--    текст Choose a password -->
+    <TextView
+        android:id="@+id/ChooseAPas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="Choose a Password"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topAppBarSignUp1" />
+
+    <!--    текст Password и ввод passord -->
+    <TextView
+        android:id="@+id/textPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="Password"
+        android:fontFamily="@font/fredoka"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputPass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--   снова раскладка для поля ввода пароля (чтобы сделать скрытие пароля)-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputPass"
+        android:layout_width="331dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/ChooseAPas"
+        app:layout_constraintVertical_bias="0.124"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/editTextPass"
+            android:layout_width="333dp"
+            android:layout_height="43dp"
+            android:layout_marginBottom="340dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    текст Confirm Password и ввод password -->
+    <TextView
+        android:id="@+id/TextConfPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/fredoka"
+        android:text="Confirm Password"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputConfPass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--   снова раскладка для поля повторного ввода пароля (чтобы сделать скрытие пароля)-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputConfPass"
+        android:layout_width="337dp"
+        android:layout_height="53dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ChooseAPas"
+        app:layout_constraintVertical_bias="0.277"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/editTextPass2"
+            android:layout_width="333dp"
+            android:layout_height="43dp"
+            android:layout_marginBottom="340dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    кнопка SignUp-->
+    <Button
+        android:id="@+id/buttonSignUp"
+        android:layout_width="313dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="228dp"
+        android:background="@drawable/button_rounded_choose"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="@string/Continue"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    текст-кнопка Login-->
+    <TextView
+        android:id="@+id/textButtonLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="196dp"
+        android:fontFamily="@font/fredoka_medium"
+        android:text="@string/login"
+        android:textColor="#5B7BFE"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.007"
+        app:layout_constraintStart_toEndOf="@+id/TextAlrYouMem" />
+
+    <!--    текст Already You Member-->>
+    <TextView
+        android:id="@+id/TextAlrYouMem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="196dp"
+        android:fontFamily="@font/fredoka"
+        android:text="Already you member? "
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
